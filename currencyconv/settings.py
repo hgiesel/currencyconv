@@ -26,7 +26,9 @@ SECRET_KEY = 'c6b8icrnfrou(9_76i&b*om@_jx1bn+u^b&4a)!51u#nj2wi6a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'currencyconv-101.herokuapp.com',
+]
 
 
 # Application definition
