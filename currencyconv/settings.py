@@ -27,6 +27,7 @@ SECRET_KEY = 'c6b8icrnfrou(9_76i&b*om@_jx1bn+u^b&4a)!51u#nj2wi6a'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
     'currencyconv-101.herokuapp.com',
 ]
 
@@ -79,11 +80,15 @@ WSGI_APPLICATION = 'currencyconv.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': 'mydb',
+        'USER': 'hgiesel',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -120,8 +125,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-BASE_DIR = dirname(dirname(abspath(__file__)))
 
 STATIC_URL = '/static/'
 STATIC_ROOT = Path(BASE_DIR) / Path('staticfiles')
